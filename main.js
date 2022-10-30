@@ -20,14 +20,15 @@ function playerChoose(e) {
     var player2Result = computerChoice.id;
     var showWinner = document.getElementById('winner');
     if (winner[player1Result] === player2Result) {
-        showWinner.innerHTML = "<h1>You win!</h1>";
+        showWinner.innerHTML = "<h3>You win!</h3>";
     }
     else if (winner[player2Result] === player1Result) {
-        showWinner.innerHTML = "<h1>I win!</h1>";
+        showWinner.innerHTML = "<h3>I win!</h3>";
     }
     else {
-        showWinner.innerHTML = "<h1>It's a draw!</h1>";
+        showWinner.innerHTML = "<h3>It's a draw!</h3>";
     }
+    document.getElementById('game').style.display = "none";
     var again = document.createElement('button');
     again.id = "again";
     again.innerText = "Play Again";
